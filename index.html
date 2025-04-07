@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Çiğdem Çeyiz İğne Oyaları</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="https://i.hizliresim.com/82ff37x.png" type="image/png">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf7;
+      color: #333;
+      background-image: url('https://i.hizliresim.com/ed4nyne.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    header {
+      background-color: rgba(252, 232, 224, 0.9);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #b67863;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+      border-radius: 50%;
+      background-color: #fce8e0;
+      display: inline-block;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #b67863;
+      transform: scale(1.1);
+      color: white;
+    }
+
+    main {
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .section-title {
+      font-family: 'Times New Roman', serif;
+      font-size: 2.5rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    section {
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 3rem;
+      padding: 2rem;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product-card h3 {
+      padding: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    footer {
+      background-color: #fce8e0;
+      padding: 2rem;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      background-color: #b67863;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: #a25e4f;
+    }
+
+    .testimonials {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .testimonial-card {
+      background-color: #fce8e0;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-style: italic;
+    }
+
+    .testimonial-card p {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    .testimonial-card h4 {
+      font-weight: 600;
+      color: #b67863;
+    }
+
+    .instagram-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .instagram-gallery img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .instagram-gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      text-align: center;
+      color: #333;
+      margin-bottom: 1rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      }
+
+      .instagram-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .product-card h3 {
+        font-size: 1rem;
+      }
+
+      footer {
+        padding: 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="https://i.hizliresim.com/82ff37x.png" alt="Çiğdem Çeyiz Logo" style="height: 150px;">
+    </div>
+    <nav>
+      <a href="#anasayfa">Anasayfa</a>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#urunler">Örnek Ürünler</a>
+      <a href="#testimonials">Müşteri Memnuniyeti</a>
+      <a href="#instagram">Instagram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="anasayfa">
+      <h2 class="section-title">El Emeği Göz Nuru</h2>
+      <p>Çiğdem Çeyiz, el yapımı oya ürünleriyle geleneksel zarafeti modern dünyaya taşıyor. Tüm ürünler %100 el işçiliğidir.</p>
+      <a href="#urunler" class="btn">Ürünleri Gör</a>
+      <a href="https://instagram.com/cigdem_ceyiz10" class="btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+        Instagram'a Git
+      </a>
+    </section>
+
+    <section id="hakkimizda">
+      <h2 class="section-title">Hakkımızda</h2>
+      <p>Merhaba! Ben Çiğdem, uzun yıllardır oya ve çeyizlik ürünler üretiyorum. Instagram üzerinden satış yapıyor, sipariş alıyorum. Her ürünümde sevgi ve emek var. Sayfama göz atmayı unutmayın! 💕</p>
+    </section>
+
+    <section id="urunler">
+      <h2 class="section-title">Örnek Ürünler</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <a href="https://www.instagram.com/p/C_gIndco7kw/?img_index=1"><img src="https://i.hizliresim.com/12skctm.jpg" alt="Resim Yükle"></a>
+          <h3>Mevlüt Örtüsü --> (tıklayarak instagrama ulaşabilirsiniz)</h3>
+        </div>
+        <div class="product-card">
+          <a href="https://www.instagram.com/p/DBp_TE9Nnab/"><img src="https://i.hizliresim.com/or94ped.jpg" alt="Resim Yükle"></a>
+          <h3>Kahve Sunum Peçetesi --> (tıklayarak instagrama ulaşabilirsiniz)</h3>
+        </div>
+        <div class="product-card">
+          <a href="https://www.instagram.com/p/DGPxGHwNu7F/"><img src="https://i.hizliresim.com/7dv6pp9.jpg" alt="Resim Yükle"></a>
+          <h3>Yıldız Modeli Motif --> (tıklayarak instagrama ulaşabilirsiniz)</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <h2 class="section-title">Müşteri Memnuniyeti</h2>
+      <div class="instagram-gallery">
+        <img src="https://i.hizliresim.com/kwujkgq.jpg" alt="Resim Yükle">
+        <img src="https://i.hizliresim.com/pv2atl1.jpg" alt="Resim Yükle">
+        <img src="https://i.hizliresim.com/rs4fyuj.jpg" alt="Resim Yükle">
+      </div>
+    </section>
+
+    <section id="instagram">
+      <h2 class="section-title">Instagram</h2>
+      <p>Ürünleri satın almak veya daha fazlasını görmek için Instagram sayfamıza göz atabilirsiniz.</p>
+      <a href="https://instagram.com/cigdem_ceyiz10" class="btn" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width: 20px; vertical-align: middle; margin-right: 8px;">
+        Instagram'a Git
+      </a>
+      <div class="instagram-gallery">
+        <img src="https://i.hizliresim.com/fukc5ck.PNG" alt="Resim Yükle" style="height: 500px;">
+        <img src="https://i.hizliresim.com/c34n4y3.PNG" alt="Resim Yükle" style="height: 500px;">
+        <img src="https://i.hizliresim.com/j2zzjma.PNG" alt="Resim Yükle" style="height: 500px;">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Çiğdem Çeyiz | Tüm hakları saklıdır.                Wollet Design
+  </footer>
+
+</body>
+</html>
+
+
